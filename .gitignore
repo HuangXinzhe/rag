@@ -162,6 +162,8 @@ cython_debug/
 # Mac
 .DS_Store
 
+# Project
 nltk_data
 model
 data
+demo/data_base

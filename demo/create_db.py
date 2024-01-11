@@ -45,12 +45,12 @@ def get_text(dir_path):
 
 # 目标文件夹
 tar_dir = [
-    "/data/InternLM",
-    "/data/InternLM-XComposer",
-    "/data/lagent",
-    "/data/lmdeploy",
-    "/data/opencompass",
-    "/data/xtuner"
+    "/Users/huangxinzhe/code/rag/data/InternLM",
+    "/Users/huangxinzhe/code/rag/data/InternLM-XComposer",
+    "/Users/huangxinzhe/code/rag/data/lagent",
+    "/Users/huangxinzhe/code/rag/data/lmdeploy",
+    "/Users/huangxinzhe/code/rag/data/opencompass",
+    "/Users/huangxinzhe/code/rag/data/xtuner"
 ]
 
 # 加载目标文件
@@ -64,7 +64,8 @@ text_splitter = RecursiveCharacterTextSplitter(
 split_docs = text_splitter.split_documents(docs)
 
 # 加载开源词向量模型
-embeddings = HuggingFaceEmbeddings(model_name="/root/data/model/sentence-transformer")
+embeddings = HuggingFaceEmbeddings(
+    model_name="/Volumes/WD_BLACK/models/sentence-transformer")
 
 # 构建向量数据库
 # 定义持久化路径
