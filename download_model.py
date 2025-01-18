@@ -28,6 +28,20 @@ from modelscope import snapshot_download
 # os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 # 下载模型
-os.system('huggingface-cli download --resume-download sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 --local-dir ./model/sentence-transformer')
+# os.system('huggingface-cli download --resume-download sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 --local-dir ./model/sentence-transformer')
 # model_dir = snapshot_download('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2',
 #                               cache_dir='/Volumes/WD_BLACK/models')
+
+
+# # 设置环境变量
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+# # 下载模型
+# os.system('huggingface-cli download --resume-download decapoda-research/llama-13b-hf --local-dir /Volumes/WD_BLACK/models')
+# export HF_ENDPOINT=https://hf-mirror.com
+
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id='meta-llama/Llama-2-13b-hf',
+                  repo_type='model',
+                  local_dir='/Volumes/WD_BLACK/models/llama-2-13b-hf',
+                  resume_download=True)

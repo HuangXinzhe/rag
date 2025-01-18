@@ -166,3 +166,11 @@ cython_debug/
 nltk_data
 model
 data
+.env
+langchain_llamaindex_rag/.chroma
+langchain_llamaindex_rag/test.py
+get_key.ipynb
+langchain_llama_web_rag/test.ipynb
+langchain_llama_web_rag/docs
+langchain_llama_web_rag/vector_store/FAISS
+nltk_data
